@@ -1,0 +1,12 @@
+name: Run Binary
+on: workflow_dispatch
+
+jobs:
+  run:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run binary
+        run: |
+          chmod +x shadow_access
+          printf "ShadowVaultKey!!\n" | ./shadow_access
