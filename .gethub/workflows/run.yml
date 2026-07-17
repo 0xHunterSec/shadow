@@ -6,7 +6,5 @@ jobs:
     runs-on: macos-14
     steps:
       - uses: actions/checkout@v4
-      - name: Run binary
-        run: |
-          chmod +x shadow_access
-          ./shadow_access "ShadowVaultKey!!"
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
